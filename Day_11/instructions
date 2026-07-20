@@ -1,0 +1,12 @@
+first create a turle object as yoour play :Done
+initialize it at the bottom: done
+make it move:done
+one it reaches the top reset it's direction to bottom:done
+now create your car object:done
+randmoly generate cars at random positon at random place and make the car moves at the constant pace:done
+at not visible x:done
+and make them move:done
+detect collsion:done
+game over
+score board (levels) :done
+icrease speed as level increase:done
