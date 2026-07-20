@@ -30,5 +30,7 @@ class Ball(Turtle):
         self.goto(0,0)
         self.x_move*=-1
 
-
+    def speed_up(self):
+        self.x_move+=0.01
+        self.y_move+=0.01
 

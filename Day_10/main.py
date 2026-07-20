@@ -1,5 +1,6 @@
 from turtle import Screen
 
+from Day_10.line import Line
 from score_board import ScoreBoard
 from paddle import Paddle
 from ball import Ball
@@ -14,6 +15,7 @@ right_paddle = Paddle(POSITION_RIGHT)
 left_paddle = Paddle(POSITION_LEFT)
 ball = Ball()
 score_board = ScoreBoard()
+line = Line()
 
 screen.update()
 screen.listen()
@@ -26,8 +28,12 @@ print(left_paddle.xcor())
 while True:
     if -380>ball.xcor():
         ball.reset_position()
+        score_board.r_point()
     if 380<ball.xcor():
         ball.reset_position()
+        score_board.l_point()
+
+
 
     ball.ball_move()
     screen.update()
@@ -39,9 +45,11 @@ while True:
 
         ball.bounce_x()
         ball.setx(330)
+        ball.speed_up()
     if ball.distance(left_paddle)<50 and ball.xcor()<-330:
         ball.bounce_x()
         ball.setx(-330)
+        ball.speed_up()
 
 
 
