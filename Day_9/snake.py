@@ -16,7 +16,12 @@ class SnakeBody:
 
         self.my_list = []
 
+        self.snake_head = ""
+        self.create_snake()
 
+
+    def create_snake(self):
+        self.my_list = []
         for coordinates in STARTING_POSITON:
             snake = Turtle("square")
             snake.color("black")
@@ -25,8 +30,11 @@ class SnakeBody:
             snake.goto(coordinates)
             self.my_list.append(snake)
         self.snake_head = self.my_list[0]
-
-
+    def reset_snake(self):
+        for i in self.my_list:
+            i.hideturtle()
+        self.my_list = None
+        self.create_snake()
     def follow_snake(self):
 
         for i in range(len(self.my_list)-1,0,-1):

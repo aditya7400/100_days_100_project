@@ -41,8 +41,10 @@ while game_is_on:
     my_snake.move()
     score_board.show_score()
     if my_snake.check_collision() or my_snake.check_self_collision():
-        game_is_on = False
-        score_board.game_over()
+        my_snake.reset_snake()
+        snake_head = my_snake.my_list[0]
+        score_board.reset_score()
+
     screen.update()
 # my_snake.move_forward()
 
