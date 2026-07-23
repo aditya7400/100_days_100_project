@@ -12,7 +12,7 @@ class ScoreBoard(Turtle):
         self.goto(x=-100, y=200)
         self.write(self.l_score, align="center", font=("Courier", 80, "normal"))
         self.goto(x=100, y=200)
-        self.write(self.r_score, align="center", font=("Courier", 80, "normal"))
+        self.write(self.r_score, align="center",font=("Courier", 80, "normal") )
 
     def r_point(self):
         self.clear()
